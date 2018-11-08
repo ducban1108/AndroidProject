@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChoiActivity">
+
+    <TextView
+        android:textColor="#000000"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30dp"
+        android:text="Câu hỏi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:fontFamily="fonts/Roboto-MediumItalic.ttf"
+        android:id="@+id/tvCauHoi"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:text="Đố bạn biết con gì???"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginTop="120dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/ic_clock"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:textSize="30dp"
+            android:text="0:30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginLeft="180dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/icon5050"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/ic_change"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:background="@drawable/nhanhihi"
+            android:textAllCaps="false"
+            android:layout_marginBottom="15dp"
+            android:textSize="25dp"
+            android:text="Đại bàng"
+            android:id="@+id/btn_answer_A"
+            android:layout_width="match_parent"
+            android:layout_height="70dp" />
+        <Button
+            android:background="@drawable/nhanhihi"
+            android:textAllCaps="false"
+            android:layout_marginBottom="15dp"
+            android:textSize="25dp"
+            android:text="Siêu nhân"
+            android:id="@+id/btn_answer_B"
+            android:layout_width="match_parent"
+            android:layout_height="70dp" />
+        <Button
+            android:background="@drawable/nhanhihi"
+            android:textAllCaps="false"
+            android:layout_marginBottom="15dp"
+            android:textSize="25dp"
+            android:text="Siêu thú"
+            android:id="@+id/btn_answer_C"
+            android:layout_width="match_parent"
+            android:layout_height="70dp" />
+        <Button
+            android:background="@drawable/nhanhihi"
+            android:textAllCaps="false"
+            android:layout_marginBottom="15dp"
+            android:textSize="25dp"
+            android:text="Con vượn"
+            android:id="@+id/btn_answer_D"
+            android:layout_width="match_parent"
+            android:layout_height="70dp" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
