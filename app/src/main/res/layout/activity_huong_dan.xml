@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HuongDanActivity">
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:onClick="Back"
+            android:src="@drawable/backkk"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#000000"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Đây là một trò chơi rất đơn giản!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#000000"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Bạn chỉ cần chọn đáp án đúng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#000000"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:text="mà chúng tôi đưa ra!!!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#000000"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Chúc các bạn chơi vui vẻ!!!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/doremon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
