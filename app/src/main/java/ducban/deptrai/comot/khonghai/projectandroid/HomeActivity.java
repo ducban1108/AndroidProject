@@ -43,7 +43,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void VaoGame(View view) {
-        Intent intent = new Intent(HomeActivity.this,ChooseTypeActivity.class);
+        Intent intent = new Intent(HomeActivity.this,ChoiActivity.class);
         startActivity(intent);
     }
 

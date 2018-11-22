@@ -7,10 +7,9 @@ public class Question {
     private String ans_b;
     private String ans_c;
     private String ans_d;
-    private String result;
-    private String types;
+    private int result;
 
-    public Question(int id, String question, String ans_a, String ans_b, String ans_c, String ans_d, String result, String types) {
+    public Question(int id, String question, String ans_a, String ans_b, String ans_c, String ans_d, int result) {
         this.id = id;
         this.question = question;
         this.ans_a = ans_a;
@@ -18,10 +17,6 @@ public class Question {
         this.ans_c = ans_c;
         this.ans_d = ans_d;
         this.result = result;
-        this.types = types;
-    }
-
-    public Question() {
     }
 
     public int getId() {
@@ -72,19 +67,11 @@ public class Question {
         this.ans_d = ans_d;
     }
 
-    public String getResult() {
+    public int getResult() {
         return result;
     }
 
-    public void setResult(String result) {
+    public void setResult(int result) {
         this.result = result;
-    }
-
-    public String getTypes() {
-        return types;
-    }
-
-    public void setTypes(String types) {
-        this.types = types;
     }
 }

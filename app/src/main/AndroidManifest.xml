@@ -21,7 +21,6 @@
         <activity android:name=".HuongDanActivity" />
         <activity android:name=".SaiActivity" />
         <activity android:name=".ChoiActivity" />
-        <activity android:name=".ChooseTypeActivity" />
         <activity android:name=".DiemCaoActivity" />
         <activity android:name=".HetTimeActivity"></activity>
     </application>

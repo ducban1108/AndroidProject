@@ -14,7 +14,7 @@ import ducban.deptrai.comot.khonghai.projectandroid.model.Question;
 
 public class DatabaseHelper {
     public static final String TABLE_NAME="Question";
-    public static final String DV_NAME="sql_cauhoi.sql";
+    public static final String DV_NAME="caudo.sql";
     public static final String PATH= Environment.getDataDirectory()+
             "/data/ducban.deptrai.comot.khonghai.projectandroid.database/databases/"+DV_NAME;
     public static final String TABLE_ID="_id";
@@ -24,7 +24,6 @@ public class DatabaseHelper {
     public static final String TABLE_CASE_C="CaseC";
     public static final String TABLE_CASE_D="CaseD";
     public static final String TABLE_RESULT="Result";
-    public static final String TABLE_TYPES = "Types";
     private Context context;
     private SQLiteDatabase database;
 
@@ -78,7 +77,6 @@ public class DatabaseHelper {
             int indexCaseC=cursor.getColumnIndex(TABLE_CASE_C);
             int indexCaseD=cursor.getColumnIndex(TABLE_CASE_D);
             int indexResult=cursor.getColumnIndex(TABLE_RESULT);
-            int indexTypes = cursor.getColumnIndex(TABLE_TYPES);
             cursor.moveToFirst();
             int id=cursor.getInt(indexId);
             String question= cursor.getString(indexQuestion);
@@ -86,9 +84,8 @@ public class DatabaseHelper {
             String caseB= cursor.getString(indexCaseB);
             String caseC= cursor.getString(indexCaseC);
             String caseD= cursor.getString(indexCaseD);
-            String trueCase= cursor.getString(indexResult);
-            String types= cursor.getString(indexTypes);
-            Question question1=new Question(id,question,caseA,caseB,caseC,caseD,trueCase,types);
+            int trueCase= cursor.getInt(indexResult);
+            Question question1=new Question(id,question,caseA,caseB,caseC,caseD,trueCase);
             arrQuestions.add(question1);
         }
         closeDaTaBase();

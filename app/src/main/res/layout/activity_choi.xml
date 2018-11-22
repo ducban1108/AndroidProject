@@ -6,18 +6,33 @@
     android:orientation="vertical"
     tools:context=".ChoiActivity">
 
-    <TextView
-        android:textColor="#000000"
-        android:layout_marginTop="30dp"
+    <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
-        android:textSize="30dp"
-        android:text="Câu hỏi"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:text="Câu hỏi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvSoCau"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 
     <TextView
         android:fontFamily="fonts/Roboto-MediumItalic.ttf"
-        android:id="@+id/tvCauHoi"
+        android:id="@+id/tvQuestions"
         android:layout_margin="10dp"
         android:textSize="20dp"
         android:text="Đố bạn biết con gì???"
@@ -31,33 +46,35 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/imClock"
             android:layout_marginLeft="20dp"
             android:src="@mipmap/ic_clock"
             android:layout_width="40dp"
             android:layout_height="40dp" />
 
         <TextView
+            android:id="@+id/tv_timeDown"
             android:textSize="30dp"
             android:text="0:30"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <LinearLayout
-            android:layout_marginLeft="180dp"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-
-            <ImageView
-                android:src="@drawable/icon5050"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
-            <ImageView
+            <TextView
                 android:layout_marginLeft="20dp"
-                android:src="@mipmap/ic_change"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:id="@+id/tvCoin"/>
+            <TextView
+                android:text="Điểm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
 
