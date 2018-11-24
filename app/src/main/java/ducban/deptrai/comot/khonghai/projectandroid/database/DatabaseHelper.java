@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import ducban.deptrai.comot.khonghai.projectandroid.model.Question;
 
 public class DatabaseHelper {
-    public static final String TABLE_NAME="Question";
+    public static final String TABLE_NAME="cauhoi";
     public static final String DV_NAME="caudo.sql";
     public static final String PATH= Environment.getDataDirectory()+
             "/data/ducban.deptrai.comot.khonghai.projectandroid.database/databases/"+DV_NAME;
@@ -56,7 +56,7 @@ public class DatabaseHelper {
     }
 
     public void openDataBase(){
-        database=context.openOrCreateDatabase(DV_NAME,context.MODE_PRIVATE,null);
+        database=context.openOrCreateDatabase(TABLE_NAME,context.MODE_PRIVATE,null);
     }
 
     public void closeDaTaBase(){
@@ -65,10 +65,14 @@ public class DatabaseHelper {
 
     public ArrayList<Question> getData(){
         openDataBase();
+        database.beginTransaction();
         ArrayList<Question> arrQuestions=new ArrayList<>();
+        String table = TABLE_NAME ;
         for (int i=1;i<16;i++) {
-            String table = TABLE_NAME + i+"";
+
+
             String sql="SELECT * FROM "+table+" ORDER BY random() limit 1";
+
             Cursor cursor= database.rawQuery(sql,null);
             int indexId= cursor.getColumnIndex(TABLE_ID);
             int indexQuestion= cursor.getColumnIndex(TABLE_QUESTION);
@@ -88,6 +92,7 @@ public class DatabaseHelper {
             Question question1=new Question(id,question,caseA,caseB,caseC,caseD,trueCase);
             arrQuestions.add(question1);
         }
+        database.close();
         closeDaTaBase();
         return arrQuestions;
     }
